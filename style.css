@@ -1,0 +1,163 @@
+:root {
+    --primary-teal: #0f5132;
+    --light-teal: #d1e7dd;
+    --accent-amber: #e67e22;
+    --dark-slate: #212529;
+    --soft-bg: #fdfbf7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--soft-bg);
+    color: var(--dark-slate);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.display-4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Utility Styles & Animations */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.btn-primary-teal {
+    background-color: var(--primary-teal);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-teal:hover {
+    background-color: #0a3622;
+    color: white;
+    transform: scale(1.03);
+}
+
+.btn-outline-amber {
+    border: 2px solid var(--accent-amber);
+    color: var(--accent-amber);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-outline-amber:hover {
+    background-color: var(--accent-amber);
+    color: white;
+    transform: scale(1.03);
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+/* Step Process Line styling */
+.process-card {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.step-badge {
+    background: var(--primary-teal);
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* Modern Eye-Catching Form Background and Container Setup */
+#contact-section {
+    /* Subtle modern abstract mesh background */
+    background-color: #fdfbf7;
+    background-image:
+        radial-gradient(at 0% 0%, rgba(20, 92, 50, 0.07) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(230, 126, 34, 0.08) 0px, transparent 50%);
+}
+
+#contact-section .card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(20, 92, 50, 0.06) !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Eye-catching pulsing accent indicator glow at the top edge of the form */
+#contact-section .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #145c32, #e67e22, #145c32);
+    background-size: 200% auto;
+    animation: gradientShift 4s linear infinite;
+    z-index: 2;
+}
+
+/* Interactive Input Glows */
+#contact-section .form-control {
+    border: 1.5px solid #e2e8f0;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+#contact-section .form-control:focus {
+    border-color: #145c32;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(20, 92, 50, 0.15);
+}
+
+/* Card Interaction on Hover */
+#contact-section .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 60px rgba(20, 92, 50, 0.12) !important;
+}
+
+/* Smooth keyframe for the glowing top strip */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
