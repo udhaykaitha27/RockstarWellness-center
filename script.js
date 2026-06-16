@@ -15,7 +15,7 @@ document.getElementById('leadForm').addEventListener('submit', function(e) {
         searchParams.append(pair[0], pair[1]);
     }
     
-    const scriptURL = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby-vi6hUWFM3nhfmxm14hTcthvE9w9y2xTNduRnr2mPlM0gr68Mnw7SEFMKU7Id0h02Og/exec';
 
     // Added mode: 'cors' and proper redirect execution settings
     fetch(scriptURL, { 
