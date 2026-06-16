@@ -34,6 +34,9 @@ h3,
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
 }
+.sticky-top{
+    z-index: 9999999;
+}
 
 .btn-primary-teal {
     background-color: var(--primary-teal);
