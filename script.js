@@ -43,3 +43,23 @@ document.getElementById('leadForm').addEventListener('submit', function(e) {
         submitBtn.innerText = "Submit Request";
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const menuToggle = document.getElementById('mainNavbar');
+    
+    // Initialize the Bootstrap collapse instance
+    const bsCollapse = new bootstrap.Collapse(menuToggle, {
+        toggle: false
+    });
+    
+    // Add click listener to each link to close the menu
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            if (menuToggle.classList.contains('show')) {
+                bsCollapse.toggle();
+            }
+        });
+    });
+});
